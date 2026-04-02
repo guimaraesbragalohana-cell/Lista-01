@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moedas de Pedrinho</title>
+</head>
+
+<body style="background-color: rgb(166, 216, 243);">
+<h1>Moedas de Pedrinho</h1>
+<label for="inputA">Digite a quantidade de moedas de R$ 1,00</label>
+<input type="number" name="inputA" id="inputA">
+<br>
+<label for="inputB">Digite a quantidade de moedas de R$ 0,50</label>
+<input type="number" name="inputB" id="inputB">
+<br>
+<label for="inputC">Digite a quantidade de moedas de R$ 0,25</label>
+<input type="number" name="inputC" id="inputC">
+<br>
+<label for="inputD">Digite a quantidade de moedas de R$ 0,10</label>
+<input type="number" name="inputD" id="inputD">
+<br>
+<label for="inputE">Digite a quantidade de moedas de R$ 0,05</label>
+<input type="number" name="inputE" id="inputE">
+<br>
+<label for="inputF">Digite a quantidade de moedas de R$ 0,01</label>
+<input type="number" name="inputF" id="inputF">
+
+<br>
+<br>
+<input type="button" name="calcular" id="calcular" value="calcular" onclick="calculo()">
+<br>
+<br>
+<label for="resultado">Resultado:</label>
+<span id="resultado" >...</span>
+
+<script> 
+function calculo () {
+
+    let M1 = parseFloat(document.getElementById("inputA").value);
+    let M2 = parseFloat(document.getElementById("inputB").value);
+    let M3 = parseFloat(document.getElementById("inputC").value);
+    let M4 = parseFloat(document.getElementById("inputD").value);
+    let M5 = parseFloat(document.getElementById("inputE").value);
+    let M6 = parseFloat(document.getElementById("inputF").value);
+
+    let P1 = 1.00 * M1
+    let P2 = 0.50 * M2
+    let P3 = 0.25 * M3
+    let P4 = 0.10 * M4
+    let P5 = 0.05 * M5 
+    let P6 = 0.01 * M6
+    let P7 = P1+P2+P3+P4+P5+P6
+
+    document.getElementById("resultado").innerHTML = P7;
+
+}
+</script>
+
+</body>
+</html>

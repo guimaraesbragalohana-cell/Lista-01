@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular média</title>
+</head>
+
+<body style="background-color: rgb(201, 227, 241);">
+
+    <h1>Calcular média</h1>
+    <label for="inputA">Digite a primeira nota</label>
+    <input type="number" name="inputA" id="inputA">
+    <br>
+    <label for="inputB">Digite a segunda nota</label>
+    <input type="number" name="inputB" id="inputB">
+    <br>
+    <label for="inputC">Digite a terceira nota</label>
+    <input type="number" name="inputC" id="inputC">
+    <br>
+    <label for="inputD">Digite a quarta nota</label>
+    <input type="number" name="inputD" id="inputD">
+    <br>
+    <input type="button" name="calcular média" id="calcular média" value="Calcular" onclick="funcaoCalcular()"> 
+    <br>
+    <br>
+    <span id="resultado" style="border: 1px solid black; padding: 5px;">0</span>
+
+    <script>
+        function funcaoCalcular() {
+            
+            let valorA = parseFloat(document.getElementById("inputA").value);
+            let valorB = parseFloat(document.getElementById("inputB").value);
+            let valorC = parseFloat(document.getElementById("inputC").value);
+            let valorD = parseFloat(document.getElementById("inputD").value);
+
+            let soma = valorA + valorB + valorC + valorD;
+            let divisão = soma / 4
+
+            document.getElementById("resultado").innerHTML = divisão;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

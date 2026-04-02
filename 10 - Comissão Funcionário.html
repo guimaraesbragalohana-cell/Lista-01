@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comissão Funcionário</title>
+</head>
+
+<body style="background-color: rgb(166, 216, 243);">
+<h1>Comissão Funcionário</h1>
+<label for="inputA">Digite o valor do salário:</label>
+<input type="number" name="inputA" id="inputA">
+<br>
+<label for="inputB">Digite o valor das vendas:</label>
+<input type="number" name="inputB" id="inputB">
+<br>
+<br>
+<input type="button" name="calcular" id="calcular" value="calcular" onclick="calculo()">
+<br>
+<br>
+<label for=comissão>Comissão:</label>
+<span id="comissão" >...</span>
+<br>
+<label for="salário">Salário final:</label>
+<span id="salário" >...</span>
+
+<script> 
+function calculo () {
+
+    let S = parseFloat(document.getElementById("inputA").value);
+    let V = parseFloat(document.getElementById("inputB").value);
+
+    let P1 = V*0.04
+    let P2 = S+P1
+
+    document.getElementById("comissão").innerHTML = P1;
+    document.getElementById("salário").innerHTML = P2;
+
+}
+</script>
+
+</body>
+</html>

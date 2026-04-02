@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distância entre dois pontos</title>
+</head>
+
+<body style="background-color: rgb(166, 216, 243);">
+<h1>Distância entre dois pontos</h1>
+<label for="inputA">Digite o valor X1</label>
+<input type="number" name="inputA" id="inputA">
+<br>
+<label for="inputB">Digite o valor X2</label>
+<input type="number" name="inputB" id="inputB">
+<br>
+<label for="inputC">Digite o valor Y1</label>
+<input type="number" name="inputC" id="inputC">
+<br>
+<label for="inputD">Digite o valor Y2</label>
+<input type="number" name="inputD" id="inputD">
+<br>
+<input type="button" name="calcular" id="calcular" value="calcular" onclick="calculo()">
+<br>
+<label for="resultado">Resultad</label>
+<span id="resultado" >...</span>
+
+<script> 
+function calculo () {
+
+    let x1 = parseFloat(document.getElementById("inputA").value);
+    let x2 = parseFloat(document.getElementById("inputB").value);
+    let y1 = parseFloat(document.getElementById("inputC").value);
+    let y2 = parseFloat(document.getElementById("inputD").value);
+
+    let P1 = (x2-x1)**2
+    let P2 = (y2-y1)**2
+    let P3 = Math.sqrt(P1+P2)
+
+    document.getElementById("resultado").innerHTML = P3;
+
+}
+</script>
+
+</body>
+</html>

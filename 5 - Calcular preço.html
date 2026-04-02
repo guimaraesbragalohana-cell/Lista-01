@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular preço</title>
+</head>
+
+<body style="background-color: rgb(201, 227, 241);">
+
+    <h1>Calcular preço</h1>
+    <label for="preço">Digite o preço do produto</label>
+    <input type="number" name="preço" id="preço">
+    <br>
+    <br>
+    <input type="button" name="calcular preço" id="calcular preço" value="Calcular" onclick="funcaoCalcular()"> 
+    <br>
+    <br>
+    <label for="vista">Valor à vista:</label>
+    <span id="vista" style="border: 1px solid black; padding: 5px;">0</span>
+    <br>
+    <br>
+    <label for=prazo>Valor à prazo:</label>
+    <span id="prazo" style="border: 1px solid black; padding: 5px;">0</span>
+
+    <script>
+        function funcaoCalcular() {
+            
+            let P = parseFloat(document.getElementById("preço").value);
+        
+            let desconto = P-(0.1*P)
+            let juros = P+(0.05*P)
+
+            document.getElementById("vista").innerHTML = desconto;
+            document.getElementById("prazo").innerHTML = juros;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

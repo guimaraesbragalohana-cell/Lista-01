@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peças de piso</title>
+</head>
+
+<body style="background-color: rgb(201, 227, 241);">
+
+    <h1>Peças de piso</h1>
+    <label for="ambiente">Insira a área do ambiente em metros</label>
+    <input type="number" name="ambiente" id="ambiente">
+    <br>
+    <label for="piso">Insira a área do piso em centímetros</label>
+    <input type="number" name="piso" id="piso">
+    <br>
+    <input type="button" name="calcular pisos" id="calcular pisos" value="Calcular" onclick="funcaoCalcular()"> 
+    <br>
+    <br>
+    <span id="resultado" style="border: 1px solid black; padding: 5px;">0</span>
+
+    <script>
+        function funcaoCalcular() {
+            
+            let A = parseFloat(document.getElementById("ambiente").value);
+            let P = parseFloat(document.getElementById("piso").value);
+
+            let transformação = P/100
+            let quantidade = A/transformação
+            let porcentagem = (10/100)*quantidade
+            let resultado = quantidade+porcentagem
+            let arredondar = Math.ceil(resultado)
+
+            document.getElementById("resultado").innerHTML = arredondar;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevar número ao cubo</title>
+</head>
+
+<body style="background-color: rgb(201, 227, 241);">
+
+    <h1>Elevar número ao cubo</h1>
+    <label for="inputA">Digite o número</label>
+    <input type="number" name="inputA" id="inputA">
+    <br>
+    <input type="button" name="calcular" id="calcular" value="Calcular" onclick="funcaoCalcular()"> 
+    <br>
+    <br>
+    <span id="resultado" style="border: 1px solid black; padding: 5px;">0</span>
+
+    <script>
+        function funcaoCalcular() {
+            
+            let valorA = parseFloat(document.getElementById("inputA").value);
+        
+            let potência = valorA ** 2
+
+            document.getElementById("resultado").innerHTML = potência;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
